@@ -1,6 +1,10 @@
 const express = require('express');
 const ytdl = require('ytdl-core');
+const cors = require('cors');
 const app = express();
+
+// Enable CORS
+app.use(cors());
 
 // API endpoint to retrieve YouTube video audio URL
 app.get('/api/audio', async (req, res) => {
@@ -25,6 +29,6 @@ app.get('/api/audio', async (req, res) => {
   }
 });
 
-app.listen(3001, () => {
-  console.log('Server is running on port 3001');
+app.listen(4000, () => {
+  console.log('Server is running on port 4000');
 });
